@@ -30,8 +30,7 @@ route.post("/", (req, res) => {
     let newId = todos.length + 1;
     let newTodo = {
       id: newId,
-      task: req.body.task,
-      done: false
+      todo: req.body.todo,
     };
 
     todos.push(newTodo);
@@ -72,7 +71,7 @@ route.put("/:id", (req, res) => {
 
     todos.map(data => {
       if (data.id == req.params.id) {
-        todos[getTodoToUpdate].task = req.body.task;
+        todos[getTodoToUpdate].todo = req.body.todo;
       }
     });
     res.send({
