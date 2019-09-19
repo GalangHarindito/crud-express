@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node index.js"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "repository": "https://github.com/herdanuyp/crud-express",
   "author": "herdanu yudistira",
   "license": "MIT",
