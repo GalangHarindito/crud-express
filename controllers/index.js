@@ -42,11 +42,9 @@ module.exports = {
   deleteTodo: (req, res) => {
     try {
       const idToDelete = req.params.id;
-      let newTodo = todos.filter(item => item.id !== parseInt(idToDelete));
+      const newTodo = todos.filter(item => item.id !== parseInt(idToDelete));
 
-      todos = newTodo;
-
-      res.status(200).send(todos);
+      res.status(200).send(newTodo);
     } catch (error) {
       res.send({
         message: `error delete todo`,
